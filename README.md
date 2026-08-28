@@ -58,3 +58,77 @@ During the project, a real-world Docker networking issue was encountered where p
                     |  Web Browser   |
                     | Nginx Website  |
                     +----------------+
+---
+
+# 🔄 CI/CD Workflow
+
+The complete CI/CD workflow is:
+
+GitHub
+   ↓
+Jenkins
+   ↓
+Checkout Source Code
+   ↓
+Validate Docker Compose
+   ↓
+docker compose down
+   ↓
+docker compose up -d
+   ↓
+Check Container Status
+   ↓
+Test Application using curl
+   ↓
+Deployment Successful
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Git | Version Control |
+| GitHub | Source Code Repository |
+| Jenkins | CI/CD Automation |
+| Docker | Containerization |
+| Docker Compose | Container Deployment |
+| Nginx | Web Server |
+| Ubuntu 24.04 | Operating System |
+| HTML | Web Application |
+| Google Cloud VM | Cloud Infrastructure |
+
+---
+
+# ☁️ Environment Details
+
+| Component | Configuration |
+|---|---|
+| Operating System | Ubuntu 24.04 |
+| Git | 2.43.0 |
+| Docker | 29.1.3 |
+| Docker Compose | 2.40.3 |
+| Jenkins | Jenkins CI/CD Server |
+| Nginx | nginx:latest |
+| Jenkins Port | 8080 |
+| Nginx Port | 8081 |
+
+---
+
+# 📁 Project Structure
+
+```text
+project11-jenkins-docker-compose/
+│
+├── Jenkinsfile
+├── docker-compose.yml
+├── index.html
+├── README.md
+│
+└── screenshots/
+    ├── jenkins-dashboard.png
+    ├── jenkins-job.png
+    ├── jenkins-pipeline.png
+    ├── docker-compose.png
+    ├── jenkins-success.png
+    └── nginx-webpage.png
